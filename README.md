@@ -1,27 +1,24 @@
 # Help Center API Assignment
 
-## Instructions
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/iAmritMalviya/fullstack-assignment
-   cd fullstack-assignment
-   ```
+## Project details
 
 2. **Frontend:**
-   - Create a React app in the `frontend` folder.
-   - Follow the instructions in `frontend.md` to complete the frontend.
+
+   - I have created the React app using vite.
+   - It fetches the posts from backend using axios and displays all the queries.
+   - Search functionality is provided to search the queries.
+   - We can click on the queries card and see the full details of the queries.
+   - at /create route, user can add a query to the database.
 
 3. **Backend:**
-   - Create a Node.js app in the `backend` folder.
-   - Follow the `backend.md` instructions to complete the backend.
 
-4. **Push Your Work:**
-   - Push both the frontend and backend apps to the same repository.
-   - Make sure the repository is public.
+   - I have used Node JS, Express JS, and Mongo DB.
+   - Route for create post, get all posts, and get post by id are there.
 
-5. **Submit Your Work:**
-   - Paste the GitHub repository link in the Google form you received after pushing your code.
+     **Front End .env:**
+   - VITE_APP_BASE_URL=http://localhost:5000/api
+     **Back End .env:**
+   - MONGO_URL= "mongodb+srv://vikasvpattar18:vikas123@cluster0.dmj5r.mongodb.net/"
+   - ORIGIN="http://localhost:5173"
 
 ---
-
