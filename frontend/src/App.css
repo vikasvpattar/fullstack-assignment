@@ -15,8 +15,6 @@
   font-size: 17px;
   display: flex;
   align-items: center;
-  -webkit-transition: margin-top 0.7s ease;
-  transition: margin-top 0.7s ease;
   height: 88px;
 }
 .nav {
@@ -200,6 +198,40 @@
   color: white;
   text-decoration: none;
 }
+.createPost {
+  width: 60%;
+  margin: 50px auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f4f6f8;
+  border-radius: 10px;
+  padding: 20px;
+}
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form input,
+.form button {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+.form p {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+.form button {
+  background-color: #000;
+  color: white;
+}
 
 .footer-container {
   padding: 40px 0;
@@ -256,6 +288,12 @@
 }
 
 @media screen and (max-width: 991px) {
+  .createPost {
+    width: 60%;
+  }
+  .help {
+    font-size: 20px;
+  }
   .containerHero h2 {
     font-size: 60px;
   }
@@ -285,6 +323,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .createPost {
+    width: 80%;
+  }
   .containerHero h2 {
     font-size: 40px;
   }
@@ -307,6 +348,9 @@
   }
   .containerHero h2 {
     font-size: 30px;
+  }
+  .createPost {
+    width: 90%;
   }
   .submit {
     margin-top: 10px;

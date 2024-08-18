@@ -6,6 +6,7 @@ import "./index.css";
 import Home from "./pages/Home.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import PostDetails from "./pages/PostDetails.jsx";
+import CreatePost from "./pages/CreatePost.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <PostDetails/>,
+        element: <PostDetails />,
+      },
+      {
+        path: "/create",
+        element: <CreatePost />,
       },
     ],
   },
