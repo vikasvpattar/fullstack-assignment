@@ -63,9 +63,32 @@
   padding: 6px 26px;
   border-radius: 8px;
 }
+.loaderContainer {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .hero {
-  padding-top: 80px;
-  padding-bottom: 115px;
+  padding: 80px 20px 115px;
   background-color: #dadbf1;
 }
 .containerHero {
@@ -78,7 +101,6 @@
 .containerHero h2 {
   color: #000000;
   font-size: 80px;
-  letter-spacing: -4px;
   line-height: 76ox;
   font-weight: 400;
   margin: 0 0 1rem;
@@ -106,27 +128,204 @@
 
   transform: translate(-50%, -50%);
 }
+
 .cardsWrapper {
-  width: 60%;
+  width: 70%;
   margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 60px;
+}
+.detailsWrapper {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+}
+.cardContainer {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card {
   background-color: #f4f6f8;
   border-radius: 10px;
-  padding: 30px 20px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  height: 100%;
 }
+.details {
+  background-color: #f4f6f8;
+  border-radius: 10px;
+  padding: 20px;
+}
+.details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.details p {
+  font-style: 16px;
+}
+.card h3,
+.card p {
+  padding: 0px 20px;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .titleWrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .hr {
-  color: #dbe1e9;
+  color: #e7eaee;
+}
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-page a {
+  padding: 8px 17px;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-container {
+  padding: 40px 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.footer-inner {
+  max-width: 1900px;
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+  margin-top: 20px;
+  font-size: 21px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-copyright img {
+  width: 138px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .containerHero h2 {
+    font-size: 60px;
+  }
+  .searchWrapper input {
+    padding: 10px;
+  }
+  .cardsWrapper {
+    width: 80%;
+    gap: 40px;
+  }
+  .header {
+    height: 100px;
+  }
+  .footer-inner {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 50px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .containerHero h2 {
+    font-size: 40px;
+  }
+  .searchWrapper input {
+    padding: 8px;
+  }
+  .cardsWrapper {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .submit {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header {
+    height: 120px;
+  }
+  .containerHero h2 {
+    font-size: 30px;
+  }
+  .submit {
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 3px 10px;
+  }
+  .cardsWrapper {
+    width: 95%;
+    gap: 20px;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+  .hero {
+    padding: 80px 10px 115px;
+  }
 }
