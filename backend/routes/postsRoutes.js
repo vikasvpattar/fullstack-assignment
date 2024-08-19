@@ -6,8 +6,8 @@ const {
 } = require("../controllers/postsController.js");
 
 const router = Router();
-router.get("/", getAllPosts);
-router.get("/:id", getPost);
-router.post("/", createPost);
+router.get("/", getAllPosts); // Route to get all posts
+router.get("/:id", getPost); // Route to get single post
+router.post("/", createPost); // Route to create post
 
 module.exports = router;
